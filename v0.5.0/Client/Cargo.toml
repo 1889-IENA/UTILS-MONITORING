@@ -1,0 +1,16 @@
+[package]
+name = "monitoring-client"
+version = "0.5.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+env_logger = "0.10"
+libc = "0.2"
+protocol = { package = "monitoring-protocol", path = "../Protocol" }
+
+[[bin]]
+name = "monitoring-client"
+path = "scr/C_Mornitoring.rs"
